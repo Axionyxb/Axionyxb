@@ -5,91 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ИИ всегда и везде</title>
   <style>
-    /* Стили для контейнера */
-    body {
-      font-family: Arial, sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-color: #f0f0f0;
     }
 
-    /* Стили для логотипа */
+    body {
+      font-family: Arial, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
     .logo {
-      display: block;
-      margin: 20px auto; /* Центрируем логотип */
-      max-width: 300px; /* Ограничиваем размер логотипа */
-      width: 100%; /* Адаптируем под ширину экрана */
-    }
-
-    /* Стили для заголовков и текста */
-    .container {
-      text-align: center;
-      padding: 20px;
+      max-width: 200px;
+      margin-bottom: 30px;
     }
 
     h1 {
-      color: #1e90ff;
       font-size: 2.5em;
+      color: #00bfff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+      text-align: center;
+      max-width: 800px;
     }
 
     h2 {
-      color: #333;
       font-size: 1.5em;
+      margin: 20px 0 10px;
+      color: #ffffff;
+      text-align: center;
     }
 
-    p, ul {
-      color: #666;
-      font-size: 1em;
+    ul, ol {
+      max-width: 600px;
+      margin: 0 auto 20px;
+      text-align: left;
       line-height: 1.6;
     }
 
-    /* Стили для формы */
     form {
-      margin: 20px auto;
-      max-width: 500px;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 100%;
+      margin-top: 30px;
     }
 
     input, textarea {
       width: 100%;
       padding: 10px;
       margin: 10px 0;
-      border: 1px solid #ccc;
+      border: none;
       border-radius: 5px;
+      font-size: 1em;
     }
 
     button {
       background-color: #1e90ff;
       color: white;
-      padding: 10px 20px;
+      padding: 12px;
       border: none;
       border-radius: 5px;
+      font-size: 1em;
       cursor: pointer;
       width: 100%;
+      margin-top: 10px;
     }
 
     button:hover {
       background-color: #0b70d0;
     }
 
-    /* Адаптивность для мобильных устройств */
     @media (max-width: 768px) {
       h1 {
-        font-size: 1.8em;
+        font-size: 2em;
       }
 
       h2 {
         font-size: 1.2em;
       }
 
+      p {
+        font-size: 1em;
+      }
+
       .logo {
-        max-width: 200px; /* Уменьшаем логотип на мобильных */
+        max-width: 150px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="logo.png" alt="AXIONYX Logo" class="logo">
+  <div class="overlay">
+    <img src="logo_resized.png" alt="AXIONYX Logo" class="logo">
 
     <h1>ИИ всегда и везде</h1>
     <p>Мы помогаем компаниям оптимизировать процессы с помощью интеграции ИИ.</p>
@@ -114,8 +142,8 @@
     <form>
       <input type="text" placeholder="ФИО" required>
       <input type="email" placeholder="Почта" required>
-      <textarea placeholder="Описание проекта" rows="5" required></textarea>
-      <textarea placeholder="Краткое техническое задание" rows="5"></textarea>
+      <textarea placeholder="Описание проекта" rows="4" required></textarea>
+      <textarea placeholder="Краткое техническое задание" rows="4"></textarea>
       <button type="submit">Отправить заявку</button>
     </form>
   </div>
