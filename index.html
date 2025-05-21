@@ -1,109 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Автоматизируйте свой бизнес с ИИ</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fdf6ee;
-      color: #000;
-      padding: 20px;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .logo {
-      display: block;
-      margin: 0 auto 30px;
-      max-width: 250px;
-      width: 100%;
-    }
-
-    h1 {
-      font-size: 2em;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-
-    h2 {
-      font-size: 1.5em;
-      margin: 30px 0 15px;
-    }
-
-    ul {
-      margin-left: 20px;
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-
-    p {
-      font-size: 1.1em;
-      margin-bottom: 20px;
-    }
-
-    form {
-      background-color: #ffffffcc;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 30px;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1em;
-    }
-
-    button {
-      background-color: #1e90ff;
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1em;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    button:hover {
-      background-color: #0b70d0;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 1.6em;
-      }
-
-      h2 {
-        font-size: 1.2em;
-      }
-
-      .logo {
-        max-width: 150px;
-      }
-    }
+    body { font-family: Arial, sans-serif; background: #fdf6ee; color: #000; padding: 20px; }
+    .container { max-width: 900px; margin: 0 auto; }
+    .logo { display: block; margin: 0 auto 30px; max-width: 250px; width: 100%; }
+    h1 { text-align: center; margin-bottom: 30px; }
+    h2 { margin: 30px 0 15px; }
+    ul { margin-left: 20px; margin-bottom: 20px; line-height: 1.6; }
+    form { background: #ffffffcc; padding: 20px; border-radius: 10px; margin-top: 30px; }
+    input, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+    button { background: #1e90ff; color: white; padding: 12px; border: none; border-radius: 5px; cursor: pointer; width: 100%; }
+    button:hover { background-color: #0b70d0; }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="logo_resized.png" alt="Логотип" class="logo">
-
+    <img src="logo_resized.png" alt="Логотип" class="logo" />
     <h1>Сократите рутину, ускорьте процессы и избавьтесь от ручной работы с помощью нейросетей и no-code решений.</h1>
-
     <h2>🚀 Что мы делаем:</h2>
     <ul>
       <li>Настраиваем ИИ и автоматизацию под конкретные задачи бизнеса</li>
@@ -111,7 +28,6 @@
       <li>Внедряем связки между ботами, сервисами, таблицами, чатами</li>
       <li>Объясняем без умных слов и сложных терминов</li>
     </ul>
-
     <h2>📈 Почему это работает:</h2>
     <ul>
       <li>🧠 Быстрее отклики = больше продаж</li>
@@ -119,21 +35,18 @@
       <li>💸 Без найма дополнительного персонала</li>
       <li>✅ Гибкие решения под любой бюджет</li>
     </ul>
-
     <h2>Оставьте заявку — мы свяжемся с вами, обсудим задачу и подберём лучшее решение под ваш бизнес.</h2>
     <form id="tg-form">
-      <input type="text" id="name" placeholder="ФИО" required>
-      <input type="email" id="email" placeholder="Почта" required>
+      <input type="text" id="name" placeholder="ФИО" required />
+      <input type="email" id="email" placeholder="Почта" required />
       <textarea id="desc" placeholder="Описание проекта" rows="4" required></textarea>
       <textarea id="brief" placeholder="Краткое техническое задание" rows="4"></textarea>
       <button type="submit">Отправить заявку</button>
     </form>
-
     <h2>Контактная информация:</h2>
     <p>Телеграм: <a href="https://t.me/k0lyasik10" target="_blank">@k0lyasik10</a></p>
     <p>Почта: <a href="mailto:k0lyasik8@yandex.ru">k0lyasik8@yandex.ru</a></p>
   </div>
-
   <script>
     document.getElementById('tg-form').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -141,35 +54,19 @@
       const email = document.getElementById('email').value;
       const desc = document.getElementById('desc').value;
       const brief = document.getElementById('brief').value;
-
-      const message =
-`💼 Новая заявка:
-👤 ФИО: ${name}
-📧 Почта: ${email}
-📝 Описание проекта: ${desc}
-📌 ТЗ: ${brief}`;
-
+      const message = `💼 Новая заявка:\n👤 ФИО: ${name}\n📧 Почта: ${email}\n📝 Описание проекта: ${desc}\n📌 ТЗ: ${brief}`;
       fetch('https://api.telegram.org/bot7730923161:AAEZ1PzqTUR-y8hcHb0XV3_uYmdoxaZn-9c/sendMessage', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          chat_id: '791844006',
-          text: message
-        })
-      })
-      .then(res => {
-        if (res.ok) {
+        headers: {{ 'Content-Type': 'application/json' }},
+        body: JSON.stringify({{ chat_id: '791844006', text: message }})
+      }).then(res => {{
+        if (res.ok) {{
           alert('Заявка отправлена!');
           document.getElementById('tg-form').reset();
-        } else {
-          alert('Ошибка при отправке. Попробуйте позже.');
-        }
-      })
-      .catch(() => {
-        alert('Ошибка сети. Проверьте соединение.');
-      });
+        }} else {{
+          alert('Ошибка при отправке.');
+        }}
+      }}).catch(() => alert('Ошибка сети.'));
     });
   </script>
 </body>
