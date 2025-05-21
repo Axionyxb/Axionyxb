@@ -2,126 +2,144 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Реальные кейсы. Реальные результаты.</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f7f9fb;
-            color: #222;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 700px;
-            margin: 40px auto;
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-            padding: 32px;
-        }
-        h1 {
-            color: #2d7ff9;
-            margin-top: 0;
-        }
-        h2 {
-            color: #2d7ff9;
-            margin-bottom: 8px;
-            margin-top: 32px;
-        }
-        ul {
-            padding-left: 20px;
-            margin-top: 0;
-        }
-        .cta {
-            background: #2d7ff9;
-            color: #fff;
-            padding: 16px 24px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1em;
-            cursor: pointer;
-            margin: 24px 0 0 0;
-            display: inline-block;
-            text-decoration: none;
-            transition: background 0.2s;
-        }
-        .cta:hover {
-            background: #195bb5;
-        }
-        .contacts {
-            margin: 24px 0;
-            font-size: 1.1em;
-        }
-        a {
-            color: #2d7ff9;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        iframe {
-            width: 100%;
-            max-width: 640px;
-            height: 900px;
-            border: none;
-            margin-top: 16px;
-            border-radius: 8px;
-            background: #f2f6fa;
-        }
-        @media (max-width: 700px) {
-            .container {
-                padding: 14px;
-            }
-            iframe {
-                height: 600px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Реальные кейсы. Реальные результаты.</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f5f0e6;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+      padding: 32px;
+    }
+    h1, h2 {
+      color: #000;
+      margin-top: 0;
+    }
+    ul, ol {
+      padding-left: 20px;
+    }
+    .cta {
+      background: #2d7ff9;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1em;
+      cursor: pointer;
+      margin-top: 16px;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .cta:hover {
+      background: #195bb5;
+    }
+    .form-field {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 100%;
+      font-size: 1em;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 100%;
+      margin-top: 20px;
+    }
+    .logo {
+      display: block;
+      max-width: 150px;
+      margin: 0 auto 24px auto;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Реальные кейсы. Реальные результаты.</h1>
-        <h2>Каждый кейс — не просто идея, а доказательство эффективности</h2>
-        <p>
-            Мы помогаем компаниям и частным клиентам достигать новых высот с помощью проверенных решений.<br>
-            Вместо громких обещаний — реальные примеры и прозрачная работа.
-        </p>
-        <h2>Почему выбирают нас?</h2>
-        <ul>
-            <li>Индивидуальный подход к каждому проекту</li>
-            <li>Прозрачная коммуникация и честные сроки</li>
-            <li>Только рабочие инструменты и современные методы</li>
-            <li>Поддержка на всех этапах сотрудничества</li>
-        </ul>
-        <h2>Как мы работаем</h2>
-        <ol>
-            <li>Анализируем вашу задачу и цели</li>
-            <li>Предлагаем оптимальное решение на основе опыта</li>
-            <li>Реализуем проект и показываем результат на практике</li>
-            <li>Сопровождаем и поддерживаем после запуска</li>
-        </ol>
-        
-<h2>Оставьте заявку</h2>
-<p>Заполните форму, и мы свяжемся с вами в ближайшее время.</p>
-<form action="mailto:k0lyasik8@yandex.ru" method="post" enctype="text/plain" style="display: flex; flex-direction: column; gap: 12px; max-width: 400px;">
-    <input type="text" name="Имя" placeholder="Ваше имя" required style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
-    <input type="email" name="Email" placeholder="Ваш email" required style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
-    <textarea name="Сообщение" placeholder="Ваш запрос или вопрос" rows="4" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
-    <button type="submit" class="cta" style="width: fit-content;">Отправить заявку</button>
-</form>
+  <div class="container">
+    <!-- Логотип -->
+    <img src="logo_resized.png" alt="Логотип" class="logo" />
 
-        <div class="contacts">
-            <strong>Контакты:</strong><br>
-            Telegram: <a href="https://t.me/k0lyasik10">@k0lyasik10</a><br>
-            Email: <a href="mailto:k0lyasik8@yandex.ru">k0lyasik8@yandex.ru</a>
-        </div>
-        <a href="#"
-           class="cta"
-           onclick="document.querySelector('iframe').scrollIntoView({behavior: 'smooth'});return false;">
-            Начните свой путь к результату — отправьте заявку!
-        </a>
-    </div>
+    <h1>Реальные кейсы. Реальные результаты.</h1>
+    <h2>Каждый кейс — доказательство эффективности</h2>
+    <p>Мы помогаем бизнесам достигать новых результатов с помощью точных решений и реального опыта.</p>
+
+    <h2>Почему выбирают нас?</h2>
+    <ul>
+      <li>Индивидуальный подход</li>
+      <li>Честные сроки и прозрачность</li>
+      <li>Только эффективные методы</li>
+      <li>Поддержка на всех этапах</li>
+    </ul>
+
+    <h2>Как мы работаем</h2>
+    <ol>
+      <li>Анализ задач</li>
+      <li>Предложение решений</li>
+      <li>Реализация и результат</li>
+      <li>Поддержка после запуска</li>
+    </ol>
+
+    <h2>Оставьте заявку</h2>
+    <form id="tgForm">
+      <input type="text" name="name" placeholder="ФИО" required class="form-field" />
+      <input type="email" name="email" placeholder="Почта" required class="form-field" />
+      <textarea name="description" placeholder="Описание проекта" rows="3" required class="form-field"></textarea>
+      <textarea name="tech" placeholder="Краткое техническое задание" rows="3" required class="form-field"></textarea>
+      <button type="submit" class="cta">Отправить заявку</button>
+    </form>
+
+    <script>
+      document.getElementById('tgForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const token = '7730923161:AAEZ1PzqTUR-y8hcHb0XV3_uYmdoxaZn-9c';
+        const chat_id = '791844006';
+
+        const name = this.name.value;
+        const email = this.email.value;
+        const description = this.description.value;
+        const tech = this.tech.value;
+
+        const message = `
+📨 *Новая заявка с сайта*:
+👤 ФИО: ${name}
+📧 Почта: ${email}
+📝 Проект: ${description}
+🛠 ТЗ: ${tech}
+        `;
+
+        fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            chat_id: chat_id,
+            text: message,
+            parse_mode: 'Markdown',
+          }),
+        })
+          .then((res) => {
+            if (res.ok) {
+              alert('Заявка отправлена!');
+              document.getElementById('tgForm').reset();
+            } else {
+              alert('Ошибка при отправке!');
+            }
+          })
+          .catch(() => alert('Ошибка подключения!'));
+      });
+    </script>
+  </div>
 </body>
 </html>
