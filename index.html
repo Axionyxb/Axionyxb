@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -57,16 +58,16 @@
       const message = `💼 Новая заявка:\n👤 ФИО: ${name}\n📧 Почта: ${email}\n📝 Описание проекта: ${desc}\n📌 ТЗ: ${brief}`;
       fetch('https://api.telegram.org/bot7730923161:AAEZ1PzqTUR-y8hcHb0XV3_uYmdoxaZn-9c/sendMessage', {
         method: 'POST',
-        headers: {{ 'Content-Type': 'application/json' }},
-        body: JSON.stringify({{ chat_id: '791844006', text: message }})
-      }).then(res => {{
-        if (res.ok) {{
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: '791844006', text: message })
+      }).then(res => {
+        if (res.ok) {
           alert('Заявка отправлена!');
           document.getElementById('tg-form').reset();
-        }} else {{
+        } else {
           alert('Ошибка при отправке.');
-        }}
-      }}).catch(() => alert('Ошибка сети.'));
+        }
+      }).catch(() => alert('Ошибка сети.'));
     });
   </script>
 </body>
