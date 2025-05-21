@@ -1,103 +1,98 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ИИ всегда и везде</title>
   <style>
+    /* Стили для контейнера */
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f5f0e6;
-      color: #000;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f0f0f0;
     }
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
-      padding: 32px;
-      position: relative;
-      overflow: hidden;
-    }
-    .overlay-text {
-      background-color: rgba(255, 255, 255, 0.85);
-      padding: 20px;
-      border-radius: 12px;
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    h1 {
-      color: #2d7ff9;
-      font-size: 2.8em;
-      margin: 0 0 10px 0;
-    }
-    h2 {
-      color: #000;
-      font-size: 1.2em;
-      margin: 0;
-    }
-    ul, ol {
-      padding-left: 20px;
-    }
-    .cta {
-      background: #2d7ff9;
-      color: #fff;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1em;
-      cursor: pointer;
-      margin-top: 16px;
-      display: inline-block;
-      text-decoration: none;
-    }
-    .cta:hover {
-      background: #195bb5;
-    }
-    .form-field {
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      width: 100%;
-      font-size: 1em;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      max-width: 100%;
-      margin-top: 20px;
-    }
+
+    /* Стили для логотипа */
     .logo {
       display: block;
+      margin: 20px auto; /* Центрируем логотип */
+      max-width: 300px; /* Ограничиваем размер логотипа */
+      width: 100%; /* Адаптируем под ширину экрана */
+    }
+
+    /* Стили для заголовков и текста */
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #1e90ff;
+      font-size: 2.5em;
+    }
+
+    h2 {
+      color: #333;
+      font-size: 1.5em;
+    }
+
+    p, ul {
+      color: #666;
+      font-size: 1em;
+      line-height: 1.6;
+    }
+
+    /* Стили для формы */
+    form {
+      margin: 20px auto;
+      max-width: 500px;
+    }
+
+    input, textarea {
       width: 100%;
-      max-height: 500px;
-      margin: 0 auto;
-      opacity: 0.15;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
-      object-fit: cover;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #1e90ff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #0b70d0;
+    }
+
+    /* Адаптивность для мобильных устройств */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8em;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
+
+      .logo {
+        max-width: 200px; /* Уменьшаем логотип на мобильных */
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Увеличенный логотип -->
-    <img src="logo_resized.png" alt="Логотип" class="logo" />
+    <img src="logo.png" alt="AXIONYX Logo" class="logo">
 
-    <div class="overlay-text">
-      <h1>ИИ всегда и везде</h1>
-      <h2>Мы помогаем компаниям оптимизировать процессы с помощью интеграции ИИ.</h2>
-    </div>
+    <h1>ИИ всегда и везде</h1>
+    <p>Мы помогаем компаниям оптимизировать процессы с помощью интеграции ИИ.</p>
 
     <h2>Почему выбирают нас?</h2>
     <ul>
@@ -116,56 +111,13 @@
     </ol>
 
     <h2>Оставьте заявку</h2>
-    <form id="tgForm">
-      <input type="text" name="name" placeholder="ФИО" required class="form-field" />
-      <input type="email" name="email" placeholder="Почта" required class="form-field" />
-      <textarea name="description" placeholder="Описание проекта" rows="3" required class="form-field"></textarea>
-      <textarea name="tech" placeholder="Краткое техническое задание" rows="3" required class="form-field"></textarea>
-      <button type="submit" class="cta">Отправить заявку</button>
+    <form>
+      <input type="text" placeholder="ФИО" required>
+      <input type="email" placeholder="Почта" required>
+      <textarea placeholder="Описание проекта" rows="5" required></textarea>
+      <textarea placeholder="Краткое техническое задание" rows="5"></textarea>
+      <button type="submit">Отправить заявку</button>
     </form>
-
-    <script>
-      document.getElementById('tgForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const token = '7730923161:AAEZ1PzqTUR-y8hcHb0XV3_uYmdoxaZn-9c';
-        const chat_id = '791844006';
-
-        const name = this.name.value;
-        const email = this.email.value;
-        const description = this.description.value;
-        const tech = this.tech.value;
-
-        const message = `
-📨 *Новая заявка с сайта*:
-👤 ФИО: ${name}
-📧 Почта: ${email}
-📝 Проект: ${description}
-🛠 ТЗ: ${tech}
-        `;
-
-        fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            chat_id: chat_id,
-            text: message,
-            parse_mode: 'Markdown',
-          }),
-        })
-          .then((res) => {
-            if (res.ok) {
-              alert('Заявка отправлена!');
-              document.getElementById('tgForm').reset();
-            } else {
-              alert('Ошибка при отправке!');
-            }
-          })
-          .catch(() => alert('Ошибка подключения!'));
-      });
-    </script>
   </div>
 </body>
 </html>
