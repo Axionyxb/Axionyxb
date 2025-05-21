@@ -14,20 +14,19 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #fdf6ee;
-      color: #000000;
+      color: #000;
       padding: 20px;
     }
 
     .container {
       max-width: 900px;
       margin: 0 auto;
-      padding: 20px;
     }
 
     .logo {
       display: block;
       margin: 0 auto 30px;
-      max-width: 200px;
+      max-width: 250px;
       width: 100%;
     }
 
@@ -42,7 +41,7 @@
       margin: 30px 0 15px;
     }
 
-    ul, ol {
+    ul {
       margin-left: 20px;
       margin-bottom: 20px;
       line-height: 1.6;
@@ -122,13 +121,56 @@
     </ul>
 
     <h2>Оставьте заявку — мы свяжемся с вами, обсудим задачу и подберём лучшее решение под ваш бизнес.</h2>
-    <form>
-      <input type="text" placeholder="ФИО" required>
-      <input type="email" placeholder="Почта" required>
-      <textarea placeholder="Описание проекта" rows="4" required></textarea>
-      <textarea placeholder="Краткое техническое задание" rows="4"></textarea>
+    <form id="tg-form">
+      <input type="text" id="name" placeholder="ФИО" required>
+      <input type="email" id="email" placeholder="Почта" required>
+      <textarea id="desc" placeholder="Описание проекта" rows="4" required></textarea>
+      <textarea id="brief" placeholder="Краткое техническое задание" rows="4"></textarea>
       <button type="submit">Отправить заявку</button>
     </form>
+
+    <h2>Контактная информация:</h2>
+    <p>Телеграм: <a href="https://t.me/k0lyasik10" target="_blank">@k0lyasik10</a></p>
+    <p>Почта: <a href="mailto:k0lyasik8@yandex.ru">k0lyasik8@yandex.ru</a></p>
   </div>
+
+  <script>
+    document.getElementById('tg-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const desc = document.getElementById('desc').value;
+      const brief = document.getElementById('brief').value;
+
+      const message =
+`💼 Новая заявка:
+👤 ФИО: ${name}
+📧 Почта: ${email}
+📝 Описание проекта: ${desc}
+📌 ТЗ: ${brief}`;
+
+      fetch('https://api.telegram.org/bot7730923161:AAEZ1PzqTUR-y8hcHb0XV3_uYmdoxaZn-9c/sendMessage', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          chat_id: '791844006',
+          text: message
+        })
+      })
+      .then(res => {
+        if (res.ok) {
+          alert('Заявка отправлена!');
+          document.getElementById('tg-form').reset();
+        } else {
+          alert('Ошибка при отправке. Попробуйте позже.');
+        }
+      })
+      .catch(() => {
+        alert('Ошибка сети. Проверьте соединение.');
+      });
+    });
+  </script>
 </body>
 </html>
