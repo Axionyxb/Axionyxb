@@ -53,7 +53,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Автоматизируйте рутину и ускорьте процессы с нейросетями.</h1>
+    <h1>Подключим ИИ к вашим бизнес-процессам — под ключ.</h1>
     <h2>🚀 Что мы делаем:</h2>
     <ul>
       <li>Настраиваем ИИ и автоматизацию под конкретные задачи бизнеса</li>
@@ -72,8 +72,7 @@
     <form id="tg-form">
       <input type="text" id="name" placeholder="ФИО" required />
       <input type="email" id="email" placeholder="Почта" required />
-      <textarea id="desc" placeholder="Описание проекта" rows="4" required></textarea>
-      <textarea id="brief" placeholder="Краткое техническое задание" rows="4"></textarea>
+      <textarea id="brief" placeholder="Краткое техническое задание (минимум 100 символов)" minlength="100" rows="4" required></textarea>
       <button type="submit">Отправить заявку</button>
     </form>
     <h2>Контактная информация:</h2>
@@ -86,9 +85,8 @@
       e.preventDefault();
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
-      const desc = document.getElementById('desc').value;
       const brief = document.getElementById('brief').value;
-      const message = `💼 Новая заявка:\n👤 ФИО: ${name}\n📧 Почта: ${email}\n📝 Описание проекта: ${desc}\n📌 ТЗ: ${brief}`;
+      const message = `💼 Новая заявка:\n👤 ФИО: ${name}\n📧 Почта: ${email}\n📌 ТЗ: ${brief}`;
       fetch('https://api.telegram.org/bot7730923161:AAEZ1PzqTUR-y8hcHb0XV3_uYmdoxaZn-9c/sendMessage', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
