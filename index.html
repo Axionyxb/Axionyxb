@@ -1,11 +1,12 @@
 
 <!DOCTYPE html>
+
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Автоматизируйте свой бизнес с ИИ</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Автоматизируйте свой бизнес с ИИ</title>
+<style>
     body {
       background: url('background.png') no-repeat center center;
       background-size: cover;
@@ -50,9 +51,8 @@
     }
     button:hover { background-color: #0b70d0; }
   </style>
-
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
     (function(m,e,t,r,i,k,a){
       m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
       m[i].l=1*new Date();
@@ -70,48 +70,47 @@
         accurateTrackBounce:true
     });
   </script>
-  <noscript>
-    <div><img src="https://mc.yandex.ru/watch/102348794" style="position:absolute; left:-9999px;" alt="" /></div>
-  </noscript>
-  <!-- /Yandex.Metrika counter -->
-
+<noscript>
+<div><img alt="" src="https://mc.yandex.ru/watch/102348794" style="position:absolute; left:-9999px;"/></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
-  <div class="container">
-    <h1>Подключим ИИ к вашим бизнес-процессам</h1>
-    <h2>🚀 Что мы делаем:</h2>
-    <ul>
-      <li>Настраиваем ИИ и автоматизацию под конкретные задачи бизнеса</li>
-      <li>Убираем рутину: заявки, переписка, отчёты, CRM</li>
-      <li>Внедряем связки между ботами, сервисами, таблицами, чатами</li>
-      <li>Объясняем без умных слов и сложных терминов</li>
-    </ul>
-    <h2>📈 Почему это работает:</h2>
-    <ul>
-      <li>🧠 Быстрее отклики = больше продаж</li>
-      <li>⏱ Меньше ручного труда = больше времени на рост</li>
-      <li>💸 Без найма дополнительного персонала</li>
-      <li>✅ Гибкие решения под любой бюджет</li>
-    </ul>
-    <h2>Оставьте заявку — мы свяжемся с вами, обсудим задачу и подберём лучшее решение под ваш бизнес.</h2>
-    <form id="tg-form">
-      <input type="text" id="name" placeholder="Имя" required />
-      <input type="email" id="email" placeholder="Почта" required />
-      <textarea id="brief" placeholder="Краткое техническое задание (минимум 100 символов)" minlength="100" rows="4" required></textarea>
-      <button type="submit">Отправить заявку</button>
-    </form>
-    <h2>Контактная информация:</h2>
-    <p>Телеграм: <a href="https://t.me/k0lyasik10" target="_blank">@k0lyasik10</a></p>
-    <p>Почта: <a href="mailto:axionyx@yandex.ru">axionyx@yandex.ru</a></p>
-    <p>Телефон: <a href="tel:+79603110778">+7 960 311-07-78</a></p>
-  </div>
-  <script>
+<div class="container">
+<h1>Подключим ИИ к вашим бизнес-процессам</h1>
+<h2>🚀 Что мы делаем:</h2>
+<ul>
+<li>Настраиваем ИИ и автоматизацию под конкретные задачи бизнеса</li>
+<li>Убираем рутину: заявки, переписка, отчёты, CRM</li>
+<li>Внедряем связки между ботами, сервисами, таблицами, чатами</li>
+<li>Объясняем без умных слов и сложных терминов</li>
+</ul>
+<h2>📈 Почему это работает:</h2>
+<ul>
+<li>🧠 Быстрее отклики = больше продаж</li>
+<li>⏱ Меньше ручного труда = больше времени на рост</li>
+<li>💸 Без найма дополнительного персонала</li>
+<li>✅ Гибкие решения под любой бюджет</li>
+</ul>
+<h2>Оставьте заявку — мы свяжемся с вами, обсудим задачу и подберём лучшее решение под ваш бизнес.</h2>
+<form id="tg-form">
+<input id="name" placeholder="Имя" required="" type="text"/>
+<input id="contact" placeholder="Телефон или Telegram" required="" type="text"/>
+<textarea id="brief" minlength="100" placeholder="Краткое техническое задание (минимум 100 символов)" required="" rows="4"></textarea>
+<button type="submit">Отправить заявку</button>
+</form>
+<h2>Контактная информация:</h2>
+<p>Телеграм: <a href="https://t.me/k0lyasik10" target="_blank">@k0lyasik10</a></p>
+<p>Почта: <a href="mailto:axionyx@yandex.ru">axionyx@yandex.ru</a></p>
+<p>Телефон: <a href="tel:+79603110778">+7 960 311-07-78</a></p>
+</div>
+<script>
     document.getElementById('tg-form').addEventListener('submit', function(e) {
       e.preventDefault();
       const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
+      const contact = document.getElementById('contact').value;
       const brief = document.getElementById('brief').value;
-      const message = `💼 Новая заявка:\n👤 ФИО: ${name}\n📧 Почта: ${email}\n📌 ТЗ: ${brief}`;
+      const message = `💼 Новая заявка:\n👤 ФИО: ${name}\n📱 Контакт: ${contact}\n📌 ТЗ: ${brief}`;
       fetch('https://api.telegram.org/bot7730923161:AAEZ1PzqTUR-y8hcHb0XV3_uYmdoxaZn-9c/sendMessage', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
