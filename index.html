@@ -95,7 +95,7 @@
 <h2>Оставьте заявку — мы свяжемся с вами, обсудим задачу и подберём лучшее решение под ваш бизнес.</h2>
 <form id="tg-form">
 <input id="name" placeholder="Имя" required="" type="text"/>
-<input id="contact" placeholder="Телефон или Telegram" required="" type="text"/>
+<input id="email" placeholder="Почта" required="" type="email"/>
 <textarea id="brief" minlength="100" placeholder="Краткое техническое задание (минимум 100 символов)" required="" rows="4"></textarea>
 <button type="submit">Отправить заявку</button>
 </form>
@@ -103,14 +103,14 @@
 <p>Телеграм: <a href="https://t.me/k0lyasik10" target="_blank">@k0lyasik10</a></p>
 <p>Почта: <a href="mailto:axionyx@yandex.ru">axionyx@yandex.ru</a></p>
 <p>Телефон: <a href="tel:+79603110778">+7 960 311-07-78</a></p>
-</div>
+<section id="ai-ideas" style="margin-top: 40px; text-align: center; padding: 20px; background: #f1f5f9; border-radius: 12px;"><h2>💡 Идеи от AI в реальном времени</h2><p id="ai-idea-text" style="font-size: 1.1rem; font-weight: bold; margin-top: 10px;">🤖 AI генерирует идеи...</p></section></div>
 <script>
     document.getElementById('tg-form').addEventListener('submit', function(e) {
       e.preventDefault();
       const name = document.getElementById('name').value;
-      const contact = document.getElementById('contact').value;
+      const email = document.getElementById('email').value;
       const brief = document.getElementById('brief').value;
-      const message = `💼 Новая заявка:\n👤 ФИО: ${name}\n📱 Контакт: ${contact}\n📌 ТЗ: ${brief}`;
+      const message = `💼 Новая заявка:\n👤 ФИО: ${name}\n📧 Почта: ${email}\n📌 ТЗ: ${brief}`;
       fetch('https://api.telegram.org/bot7730923161:AAEZ1PzqTUR-y8hcHb0XV3_uYmdoxaZn-9c/sendMessage', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -125,5 +125,23 @@
       }).catch(() => alert('Ошибка сети.'));
     });
   </script>
-</body>
+<script>
+const ideas = [
+  "🤖 AI-бот для онлайн-школы: отвечает ученикам 24/7",
+  "📊 Автоотчёт по продажам для магазина",
+  "💬 AI для HR: отвечает кандидатам в Telegram",
+  "📦 Генерация карточек товаров из Excel",
+  "🧠 GPT для юридических консультаций",
+  "📈 Анализ клиентов и прогноз продаж",
+  "✍️ Генерация текстов для маркетинга",
+  "🕒 Ответы на заявки в 5 раз быстрее",
+  "🎨 AI-дизайнер для баннеров и постов",
+  "📬 Автоматизация email-рассылок",
+];
+let index = 0;
+setInterval(() => {
+  document.getElementById("ai-idea-text").textContent = ideas[index];
+  index = (index + 1) % ideas.length;
+}, 3000);
+</script></body>
 </html>
