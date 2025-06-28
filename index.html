@@ -1,11 +1,119 @@
 
 <!DOCTYPE html>
+
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Axionyx — Внедрение ИИ в бизнес</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Axionyx — Внедрение ИИ в бизнес</title>
+<style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0052d4, #4364f7, #6fb1fc);
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    header {
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background: transparent;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    nav a:hover {
+      color: #a0f0ff;
+    }
+    .hero {
+      text-align: left;
+      padding: 6rem 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #e0e0e0;
+    }
+    .btn-primary {
+      margin-top: 2rem;
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      border-radius: 30px;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(to right, #0072ff, #00c6ff);
+    }
+    .footer {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #eee;
+    }
+    .hex-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/hexellence.png') repeat;
+      opacity: 0.08;
+      z-index: 0;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+  
+    .hero {
+      background: url('background.png') no-repeat center center/cover;
+      background-color: rgba(0,0,0,0.5);
+      background-blend-mode: overlay;
+      border-radius: 12px;
+    }
+    
+#tasks .card {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+#tasks .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+#tasks h4 {
+  color: #a0f0ff;
+}
+</style>
+<style>
     html, body {
       margin: 0;
       padding: 0;
@@ -101,79 +209,121 @@
       display: inline-block;
       margin-top: 2rem;
     }
-  </style>
-</head>
+  </style></head>
 <body>
-  <header>
-    <h1>Axionyx</h1>
-    <nav>
-      <a href="#about">О нас</a>
-      <a href="#benefits">Преимущества</a>
-      <a href="#services">Услуги</a>
-      <a href="#contact">Контакты</a>
-    </nav>
-  </header>
-
-  <div class="hero">
-    <h2>Внедряем ИИ в ваш бизнес</h2>
-    <p>Автоматизируем процессы, убираем рутину и усиливаем команды через GPT, боты, интеграции и аналитику.</p>
-    <a href="#contact" class="button">Оставить заявку</a>
-  </div>
-
-  <div id="about" class="section">
-    <h3>Что мы делаем</h3>
-    <ul>
-      <li>Внедряем GPT, ботов и автоматизацию в конкретные задачи бизнеса</li>
-      <li>Убираем рутину: заявки, переписка, отчёты, CRM</li>
-      <li>Создаём связки между сервисами, таблицами, чатами</li>
-      <li>Объясняем просто, без сложных терминов</li>
-    </ul>
-  </div>
-
-  <div id="benefits" class="section">
-    <h3>Почему это работает</h3>
-    <ul>
-      <li>Быстрые отклики = больше продаж</li>
-      <li>Меньше ручного труда = больше времени на рост</li>
-      <li>Без найма дополнительных сотрудников</li>
-      <li>Гибкие решения под любой бюджет</li>
-    </ul>
-  </div>
-
-  <div id="services" class="section">
-    <h3>Примеры решений</h3>
-    <div class="grid">
-      <div class="card"><h4>Генерация контента</h4><p>ИИ пишет тексты, описания, письма — быстро и в нужном тоне.</p></div>
-      <div class="card"><h4>Чат-бот поддержки</h4><p>Отвечает 24/7 клиентам, экономит время сотрудников.</p></div>
-      <div class="card"><h4>Анализ документов</h4><p>ИИ читает PDF, выделяет важное, делает сводки и выводы.</p></div>
+<div class="hex-bg"></div>
+<div class="content">
+<header>
+<div class="logo">Axionyx</div>
+<nav>
+<a href="#">Главная</a>
+<a href="#about">О нас</a>
+<a href="#services">Примеры решений</a>
+<a href="#contact">Контакты</a>
+<a href="#cases">Кейсы</a></nav>
+</header>
+<section class="hero">
+<h1>Axionyx — ИИ для вашего бизнеса</h1>
+<p>Мы внедряем искусственный интеллект в бизнес-процессы: автоматизируем задачи, сокращаем рутину и помогаем компаниям расти быстрее. Поддержка на каждом этапе — от идеи до интеграции.</p>
+<a class="btn-primary" href="#contact">learn more</a>
+</section>
+<div class="section section" id="about">
+<h3>Что мы делаем</h3>
+<ul>
+<li>Внедряем GPT, ботов и автоматизацию в конкретные задачи бизнеса</li>
+<li>Убираем рутину: заявки, переписка, отчёты, CRM</li>
+<li>Создаём связки между сервисами, таблицами, чатами</li>
+<li>Объясняем просто, без сложных терминов</li>
+</ul>
+</div><div class="section section" id="benefits">
+<h3>Почему это работает</h3>
+<ul>
+<li>Быстрые отклики = больше продаж</li>
+<li>Меньше ручного труда = больше времени на рост</li>
+<li>Без найма дополнительных сотрудников</li>
+<li>Гибкие решения под любой бюджет</li>
+</ul>
+</div><div class="section section" id="services">
+<h3>Примеры решений</h3>
+<div class="grid">
+<div class="card"><h4>Генерация контента</h4><p>ИИ пишет тексты, описания, письма — быстро и в нужном тоне.</p></div>
+<div class="card"><h4>Чат-бот поддержки</h4><p>Отвечает 24/7 клиентам, экономит время сотрудников.</p></div>
+<div class="card"><h4>Анализ документов</h4><p>ИИ читает PDF, выделяет важное, делает сводки и выводы.</p></div>
+</div>
+</div>
+<div class="section" id="cases">
+<h3>Реальные кейсы</h3>
+<div class="grid">
+<div class="card">
+<h4>Образование: Telegram-бот</h4>
+<p>Продажи выросли на <strong>27%</strong> благодаря автоматизации общения. Сэкономлено 100+ часов менеджеров в месяц.</p>
+</div>
+<div class="card">
+<h4>Агентство продаж: генерация КП</h4>
+<p>Доход вырос на <strong>39%</strong>. GPT создаёт предложения за минуты, что ускорило цикл сделок в 3 раза.</p>
+</div>
+<div class="card">
+<h4>Рекрутинг: ИИ-подбор кандидатов</h4>
+<p>Срок найма снизился с 12 до 4 дней. Кол-во закрытых вакансий выросло на <strong>70%</strong>, доход HR удвоился.</p>
+</div>
+</div>
+</div>
+<div class="section" id="tasks">
+<h3>С какими задачами мы справляемся</h3>
+<div class="grid">
+<div class="card">
+<h4>Обработка заявок</h4>
+<p>Боты фиксируют обращения, заполняют таблицы и сразу уведомляют нужного сотрудника.</p>
+</div>
+<div class="card">
+<h4>Генерация текстов</h4>
+<p>ИИ пишет тексты для сайтов, писем и КП в нужном стиле и тоне за секунды.</p>
+</div>
+<div class="card">
+<h4>Подключение CRM</h4>
+<p>Автоматическое создание лидов и задач в CRM после заявки с сайта или чата.</p>
+</div>
+<div class="card">
+<h4>Уведомления в Telegram</h4>
+<p>Система моментально сообщает о важных событиях: заявках, оплатах, сообщениях.</p>
+</div>
+<div class="card">
+<h4>Анализ данных</h4>
+<p>ИИ анализирует таблицы, отчёты, анкеты — и делает выводы без ручной работы.</p>
+</div>
+<div class="card">
+<h4>Интеграции между сервисами</h4>
+<p>Связываем Google Sheets, Notion, Telegram, CRM и другие инструменты в единую систему.</p>
+</div>
+</div>
+</div>
+<div class="section section" id="contact">
+<h3>Оставьте заявку</h3>
+<form id="tg-form">
+<input id="name" placeholder="Имя" required="" type="text"/>
+<input id="email" placeholder="Телефон или Telegram" required="" type="text"/>
+<textarea id="brief" minlength="100" placeholder="Краткое ТЗ (минимум 100 символов)" required="" rows="4"></textarea>
+<button type="submit">Отправить заявку</button>
+</form>
+<p style="margin-top:2rem;">
+<p style="margin-top:2rem; line-height:1.8;">
+<strong>Свяжитесь с нами напрямую:</strong><br/>
+          📱 Телефон: <a href="tel:+79603110778" style="color:#59f5d5;">+7 960 311 07 78</a><br/>
+          Telegram: <a href="https://t.me/k0lyasik10" style="color:#59f5d5;" target="_blank">@k0lyasik10</a><br/>
+          ✉️ Email: <a href="mailto:axionyx@yandex.ru" style="color:#59f5d5;">axionyx@yandex.ru</a>
+</p>
+</p>
+</div><div class="footer">
+      © Axionyx, 2025 — ИИ, автоматизация и интеграции под ключ.
     </div>
-  </div>
-
-  <div id="contact" class="section">
-    <h3>Оставьте заявку</h3>
-    <form id="tg-form">
-      <input type="text" id="name" placeholder="Имя" required />
-      <input type="email" id="email" placeholder="Почта" required />
-      <textarea id="brief" rows="4" minlength="100" placeholder="Краткое ТЗ (минимум 100 символов)" required></textarea>
-      <button type="submit">Отправить заявку</button>
-    </form>
-    <p style="margin-top:2rem;">Свяжитесь с нами напрямую:<br/>
-      Telegram: <a href="https://t.me/k0lyasik10" target="_blank">@k0lyasik10</a><br/>
-      Email: <a href="mailto:axionyx@yandex.ru">axionyx@yandex.ru</a>
-    </p>
-  </div>
-
-  <div class="footer">
-    © Axionyx, 2025 — ИИ, автоматизация и интеграции под ключ.
-  </div>
-
-  <script>
+</div>
+<script>
     document.getElementById('tg-form').addEventListener('submit', function(e) {
       e.preventDefault();
       const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
+      const contact = document.getElementById('contact').value;
       const brief = document.getElementById('brief').value;
-      const message = `💼 Новая заявка:\n👤 Имя: ${name}\n📧 Почта: ${email}\n📌 ТЗ: ${brief}`;
+      const message = `💼 Новая заявка:\n👤 Имя: ${name}\n📞 Контакт: ${contact}\n📌 ТЗ: ${brief}`;
       fetch('https://api.telegram.org/bot7730923161:AAEZ1PzqTUR-y8hcHb0XV3_uYmdoxaZn-9c/sendMessage', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -187,6 +337,5 @@
         }
       }).catch(() => alert('Ошибка сети.'));
     });
-  </script>
-</body>
+  </script></body>
 </html>
