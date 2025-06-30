@@ -334,7 +334,7 @@
     document.getElementById('tg-form').addEventListener('submit', function(e) {
       e.preventDefault();
       const name = document.getElementById('name').value;
-      const contact = document.getElementById('contact').value;
+      const contact = document.getElementById('email').value;
       const brief = document.getElementById('brief').value;
       const message = `💼 Новая заявка:\n👤 Имя: ${name}\n📞 Контакт: ${contact}\n📌 ТЗ: ${brief}`;
       fetch('https://api.telegram.org/bot7730923161:AAEZ1PzqTUR-y8hcHb0XV3_uYmdoxaZn-9c/sendMessage', {
