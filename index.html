@@ -336,7 +336,7 @@
       const name = document.getElementById('name').value;
       const contact = document.getElementById('email').value;
       const brief = document.getElementById('brief').value;
-      const message = `💼 Новая заявка:\n👤 Имя: ${name}\n📞 Контакт: ${contact}\n📌 ТЗ: ${brief}\n✉️ Email: axionyx@yandex.ru`;
+      const message = `💼 Новая заявка:\n👤 Имя: ${name}\n📬 Почта / Telegram: ${contact}\n📌 ТЗ: ${brief}\n✉️ Email: axionyx@yandex.ru`;
       fetch('https://api.telegram.org/bot7730923161:AAEZ1PzqTUR-y8hcHb0XV3_uYmdoxaZn-9c/sendMessage', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
