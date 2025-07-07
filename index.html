@@ -349,6 +349,17 @@
   color: #aaa;
   margin-top: 20px;
 }
+
+.ai-arrow {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+}
+.arrow1 { top: 0; left: 0; }
+.arrow2 { top: 0; left: 200px; }
+.arrow3 { top: 200px; left: 0; }
+.arrow4 { top: 200px; left: 200px; }
 </style>
 </head>
 <body>
@@ -450,7 +461,6 @@
 </div>
 </form>
 </div>
-
 <script>
 document.getElementById('tg-form').addEventListener('submit', function(e) {
   e.preventDefault();
@@ -476,7 +486,21 @@ document.getElementById('tg-form').addEventListener('submit', function(e) {
 <div class="ai-container">
 <h2>Как ИИ работает за вас</h2>
 <p class="ai-subtitle">Автоматизация процессов — от заявки до результата</p>
-<div class="ai-graph"><div class="ai-node center"><img alt="ИИ" src="ai.png" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; width: 100%; height: 100%;"/></div><div class="ai-node node1"><img alt="Заявка" src="zayavka.png" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; width: 100%; height: 100%;"/></div><div class="ai-node node2"><img alt="Таблица" src="tablitsa.png" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; width: 100%; height: 100%;"/></div><div class="ai-node node3"><img alt="Уведомление" src="uvedomlenie.png" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; width: 100%; height: 100%;"/></div><div class="ai-node node4"><img alt="Аналитика" src="analitika.png" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; width: 100%; height: 100%;"/></div></div>
+<div class="ai-graph"><div class="ai-node center"><img alt="ИИ" src="ai.png" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;"/></div><div class="ai-node node1"><img alt="Заявка" src="zayavka.png" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;"/></div><div class="ai-node node2"><img alt="Таблица" src="tablitsa.png" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;"/></div><div class="ai-node node3"><img alt="Уведомление" src="uvedomlenie.png" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;"/></div><div class="ai-node node4"><img alt="Аналитика" src="analitika.png" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;"/></div>
+<svg class="ai-arrow arrow1" viewbox="0 0 100 100">
+<defs><marker id="arrowhead" markerheight="7" markerwidth="10" orient="auto" refx="0" refy="3.5"><polygon fill="white" points="0 0, 10 3.5, 0 7"></polygon></marker></defs>
+<line marker-end="url(#arrowhead)" stroke="white" stroke-width="2" x1="20" x2="110" y1="20" y2="110"></line>
+</svg>
+<svg class="ai-arrow arrow2" viewbox="0 0 100 100">
+<line marker-end="url(#arrowhead)" stroke="white" stroke-width="2" x1="80" x2="-10" y1="20" y2="110"></line>
+</svg>
+<svg class="ai-arrow arrow3" viewbox="0 0 100 100">
+<line marker-end="url(#arrowhead)" stroke="white" stroke-width="2" x1="20" x2="110" y1="80" y2="-10"></line>
+</svg>
+<svg class="ai-arrow arrow4" viewbox="0 0 100 100">
+<line marker-end="url(#arrowhead)" stroke="white" stroke-width="2" x1="80" x2="-10" y1="80" y2="-10"></line>
+</svg>
+</div>
 <p class="ai-note">ИИ берёт рутину на себя — чтобы вы занимались важным</p>
 </div>
 </section><div class="footer">
