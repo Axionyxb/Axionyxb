@@ -527,6 +527,80 @@
   transform: scale(1.1);
   box-shadow: 0 0 30px rgba(0, 136, 255, 0.8);
 }
+
+.comparison-section {
+  background: #0d111a;
+  color: #eaeef5;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.comparison-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+.comparison-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 1.5rem;
+}
+.comparison-row {
+  display: contents;
+}
+.comparison-row .col {
+  padding: 1.2rem 1rem;
+  background: #131b2f;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: background 0.3s ease;
+}
+.comparison-row .col:hover {
+  background: #1a233a;
+}
+.comparison-row.header .col {
+  background: transparent;
+  font-weight: 600;
+  font-size: 1.2rem;
+  justify-content: center;
+  color: #999;
+}
+.check {
+  color: #22e584;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.cross {
+  color: #ff5a5a;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.ai-col {
+  background: #162e26;
+  color: #22e584;
+}
+.manual-col {
+  background: #2a1c1c;
+  color: #ff5a5a;
+}
+.comparison-row .col {
+  font-weight: 500;
+}
+
+.comparison-conclusion {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  color: #ffffffcc;
+  font-weight: 500;
+}
 </style>
 </head>
 <body>
@@ -650,15 +724,11 @@ document.getElementById('tg-form').addEventListener('submit', function(e) {
   }).catch(() => alert('Ошибка сети.'));
 });
 </script>
-<section class="ai-automation">
-<div class="ai-container">
-<h2>Как ИИ работает за вас</h2>
-<p class="ai-subtitle">Автоматизация процессов — от заявки до результата</p>
-<div class="ai-graph"><div class="ai-node center"><img alt="ИИ" src="ai.png" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;"/></div><div class="ai-node node1"><img alt="Заявка" src="zayavka.png" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;"/></div><div class="ai-node node2"><img alt="Таблица" src="tablitsa.png" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;"/></div><div class="ai-node node3"><img alt="Уведомление" src="uvedomlenie.png" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;"/></div><div class="ai-node node4"><img alt="Аналитика" src="analitika.png" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;"/></div>
-</div>
-<p class="ai-note">ИИ берёт рутину на себя — чтобы вы занимались важным</p>
-</div>
-</section><div class="footer">
+<section class="comparison-section" style="background: url('background.png') no-repeat center center / cover; padding: 60px 0; position: relative;"><div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 0;"></div>
+<h2 style="position: relative; z-index: 1;">ИИ против ручного труда</h2><p style="font-size: 1.1rem; color: #aaa; margin-top: -1rem; margin-bottom: 2rem; position: relative; z-index: 1;">Сравните процессы с ИИ и без него — и выберите эффективность</p>
+<div class="comparison-table" style="position: relative; z-index: 1;"><div class="comparison-row"><div class="col ai-col">✔ Автообработка заявок</div><div class="col manual-col">✖ Менеджер отвечает вручную</div></div><div class="comparison-row"><div class="col ai-col">✔ GPT пишет КП и письма</div><div class="col manual-col">✖ Сотрудник пишет вручную</div></div><div class="comparison-row"><div class="col ai-col">✔ Автоматический анализ PDF</div><div class="col manual-col">✖ Чтение вручную</div></div><div class="comparison-row"><div class="col ai-col">✔ Подбор кандидатов ИИ</div><div class="col manual-col">✖ Ручной просмотр резюме</div></div><div class="comparison-row"><div class="col ai-col">✔ Уведомления ботом</div><div class="col manual-col">✖ Напоминания через менеджера</div></div></div>
+<div class="comparison-conclusion" style="position: relative; z-index: 1;">С ИИ ваш бизнес работает быстрее, точнее и эффективнее. Время — деньги. А ИИ экономит и то, и другое.</div></section>
+<div class="footer">
   © Axionyx, 2025 — ИИ, автоматизация и интеграции под ключ.
 </div>
 </body>
