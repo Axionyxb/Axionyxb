@@ -426,6 +426,107 @@
 .arrow2 { top: -40px; left: 200px; }
 .arrow3 { top: 200px; left: -40px; }
 .arrow4 { top: 200px; left: 200px; }
+
+.hero-upgraded {
+  background: radial-gradient(circle at 20% 40%, #0f111a, #0a0b13);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-upgraded .hero-content {
+  max-width: 800px;
+  margin: auto;
+  z-index: 2;
+  position: relative;
+}
+.hero-upgraded h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+.hero-upgraded p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+.glow {
+  background: linear-gradient(90deg, #00f0ff, #00c3ff, #0077cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 8s linear infinite;
+}
+.btn-glow {
+  margin-top: 2rem;
+  padding: 0.9rem 2rem;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  background: linear-gradient(90deg, #00f0ff, #0077cc);
+  color: white;
+  box-shadow: 0 0 20px #0077cc80;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+.btn-glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00c3ff;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.glass {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+}
+.glass:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+}
+
+
+.card.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(14px);
+  color: #111 !important;
+}
+.card.glass h4,
+.card.glass p {
+  color: #111 !important;
+}
+
+.ai-node {
+  background: linear-gradient(145deg, #0077ff, #0055cc);
+  box-shadow: 0 0 20px rgba(0, 136, 255, 0.5);
+  border: 2px solid #ffffff30;
+}
+.ai-node img {
+  filter: brightness(0) invert(1);
+}
+.ai-automation {
+  background: radial-gradient(circle at center, #0d111a, #000000);
+}
+.ai-subtitle, .ai-note {
+  color: #cccccc;
+}
+.ai-automation h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.ai-node {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.ai-node:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(0, 136, 255, 0.8);
+}
 </style>
 </head>
 <body>
@@ -433,16 +534,17 @@
 <div class="logo">Axionyx</div>
 <nav>
 <a href="#">Главная</a>
-
 <a href="#services">Примеры решений</a>
 <a href="#contact">Контакты</a>
 <a href="#cases">Кейсы</a>
 </nav>
 </header>
-<section class="hero">
-<h1>Axionyx — ИИ для вашего бизнеса</h1>
-<p>Мы внедряем искусственный интеллект в бизнес-процессы: автоматизируем задачи, сокращаем рутину и помогаем компаниям расти быстрее. Поддержка на каждом этапе — от идеи до интеграции.</p>
-<a class="btn-primary" href="#contact">Подробнее</a>
+<section class="hero-upgraded">
+<div class="hero-content">
+<h1><span class="glow">Axionyx</span><br/>ИИ для вашего бизнеса</h1>
+<p>Мы автоматизируем рутину и создаём решения на базе GPT и нейросетей — быстро, эффективно и под ключ.</p>
+<a class="btn-glow" href="#contact">Оставить заявку</a>
+</div>
 </section>
 <div class="section" id="benefits">
 <h3>Почему это работает</h3>
@@ -456,20 +558,20 @@
 <div class="section" id="services">
 <h3>Примеры решений</h3>
 <div class="grid">
-<div class="card">
+<div class="card glass" style="backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: #fff;">
 <img alt="" class="icon" src="https://img.icons8.com/ios-filled/50/0077cc/keyboard.png"/>
 <h4>Генерация контента</h4>
-<p>ИИ пишет тексты, описания, письма — быстро и в нужном тоне.</p><a class="btn-learn" href="#contact">Подробнее</a>
+<p>ИИ пишет тексты, описания, письма — быстро и в нужном тоне.</p>
 </div>
-<div class="card alt">
+<div class="card alt glass" style="backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: #fff;">
 <img alt="" class="icon" src="https://img.icons8.com/ios-filled/50/0077cc/bot.png"/>
 <h4>Чат-бот поддержки</h4>
-<p>Отвечает 24/7 клиентам, экономит время сотрудников.</p><a class="btn-learn" href="#contact">Подробнее</a>
+<p>Отвечает 24/7 клиентам, экономит время сотрудников.</p>
 </div>
-<div class="card">
+<div class="card glass" style="backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: #fff;">
 <img alt="" class="icon" src="https://img.icons8.com/ios-filled/50/0077cc/document.png"/>
 <h4>Анализ документов</h4>
-<p>ИИ читает PDF, выделяет важное, делает сводки и выводы.</p><a class="btn-learn" href="#contact">Подробнее</a>
+<p>ИИ читает PDF, выделяет важное, делает сводки и выводы.</p>
 </div>
 </div>
 </div>
