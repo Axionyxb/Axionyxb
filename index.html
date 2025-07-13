@@ -611,6 +611,27 @@
   }
 }
 
+
+@media (max-width: 768px) {
+  .comparison-section h2 {
+    font-size: 1.8rem !important;
+  }
+
+  .comparison-section p {
+    font-size: 1rem !important;
+  }
+
+  .comparison-section .grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.5rem !important;
+  }
+
+  .comparison-section div[style*="background"] {
+    font-size: 0.9rem !important;
+    padding: 0.8rem 1rem !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -861,9 +882,9 @@ document.getElementById('tg-form').addEventListener('submit', function(e) {
 </script>
 
 <section class="comparison-section" style="background: url('background.png') no-repeat center center / cover; color: white; padding: 80px 20px; text-align: center;">
-<div style="max-width: 1000px; margin: auto; background-color: rgba(0,0,0,0.6); padding: 40px; border-radius: 16px;">
-<h2 style="font-size: 2.6rem; margin-bottom: 1rem;">ИИ против ручного труда</h2>
-<p style="color: #ccc; margin-bottom: 2.5rem;">Сравните процессы с ИИ и без него — и выберите эффективность</p>
+<div style="max-width: 1000px; margin: auto; background-color: transparent; padding: 0; border-radius: 0;">
+<h2 style="font-size: 2.6rem; margin-bottom: 1rem;">ИИ vs Ручной труд</h2>
+<p style="color: #ccc; margin-bottom: 2.5rem;">Что быстрее, дешевле и точнее? Сравните сами:</p>
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: left;">
 <div style="background: #102020; padding: 1.2rem 1.5rem; border-radius: 12px;">✅ Автообработка заявок</div>
 <div style="background: #200d0d; padding: 1.2rem 1.5rem; border-radius: 12px;">❌ Менеджер отвечает вручную</div>
