@@ -495,14 +495,7 @@
   color: #111 !important;
 }
 
-@media (max-width: 768px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
+
 
   nav a {
     margin-left: 0;
@@ -520,10 +513,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .burger {
-    display: block;
-  }
+
 
   nav {
     display: none;
@@ -555,10 +545,7 @@
 }
 
 
-@media (max-width: 768px) {
-  #benefits {
-    padding: 2rem 1rem !important;
-  }
+
 
   #benefits .container {
     padding: 0;
@@ -574,16 +561,7 @@
 }
 
 
-@media (max-width: 768px) {
-  #benefits .container {
-    display: flex !important;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 0 1rem;
-    margin: 0 auto;
-    width: 100%;
-    box-sizing: border-box;
-  }
+
 
   #benefits .card {
     width: 100% !important;
@@ -604,18 +582,11 @@
     padding-bottom: 2rem !important;
   }
 }
-@media (max-width: 768px) {
-  #automation, #content-ai, #recruitment {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
-  }
+
 }
 
 
-@media (max-width: 768px) {
-  .comparison-section h2 {
-    font-size: 1.8rem !important;
-  }
+
 
   .comparison-section p {
     font-size: 1rem !important;
@@ -630,6 +601,34 @@
     font-size: 0.9rem !important;
     padding: 0.8rem 1rem !important;
   }
+}
+
+
+
+
+  .comparison-section p:last-of-type {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 1.5rem;
+  }
+}
+
+
+.comparison-section h2,
+.comparison-section p,
+.comparison-section {
+  color: white !important;
+  text-shadow: 0 0 4px rgba(0,0,0,0.8);
+}
+
+.comparison-section p:last-of-type {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 1.5rem;
 }
 
 </style>
