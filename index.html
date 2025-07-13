@@ -513,18 +513,52 @@
     align-items: flex-start;
   }
 }
+
+.burger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  header {
+    align-items: flex-start;
+  }
+}
+
 </style>
 </head>
 <body>
+
 <header>
-<div class="logo">Axionyx</div>
-<nav>
-<a href="#">Главная</a>
-<a href="#services">Примеры решений</a>
-<a href="#contact">Контакты</a>
-<a href="#cases">Кейсы</a>
-</nav>
+  <div class="logo">Axionyx</div>
+  <div class="burger" onclick="toggleMenu()">☰</div>
+  <nav id="nav-menu">
+    <a href="#benefits">Почему это работает</a>
+    <a href="#cases">Реальные кейсы</a>
+    <a href="#automation">Автоматизация</a>
+    <a href="#content-ai">Контент</a>
+    <a href="#recruitment">Подбор</a>
+    <a href="#contact">Заявка</a>
+  </nav>
 </header>
+
 <section class="hero-upgraded">
 <div class="hero-content">
 <h1><span class="glow">Axionyx</span><br/>ИИ для вашего бизнеса</h1>
@@ -802,6 +836,14 @@ function plusSlideHR(n) {
   showSlideHR(slideHRIndex + n);
 }
 showSlideHR(slideHRIndex);
+</script>
+
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('nav-menu');
+  menu.classList.toggle('active');
+}
 </script>
 
 </body>
