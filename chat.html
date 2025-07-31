@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Axionyx Chat</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 40px; background: #f5f5f5; }
+    #chat-box { border: 1px solid #ccc; padding: 10px; width: 400px; height: 300px; overflow-y: scroll; background: white; }
+    #input-box { margin-top: 10px; display: flex; }
+    #message { flex: 1; padding: 5px; }
+    button { padding: 6px 12px; }
+    .user { font-weight: bold; color: #007bff; }
+    .bot { font-weight: bold; color: green; }
+    .msg { margin: 4px 0; }
+  </style>
+</head>
+<body>
+  <h2>Axionyx AI Chat</h2>
+  <div id="chat-box"></div>
+  <div id="input-box">
+    <input type="text" id="message" placeholder="Введите сообщение..." />
+    <button onclick="sendMessage()">Отправить</button>
+  </div>
+
+  <script>
+    const webhookUrl = "https://otttor.app.n8n.cloud/webhook/axionyx-chat";
+    const chatBox = document.getElementById("chat-box");
+
+    function appendMessage(sender, text) {
+      const div = document.createElement("div");
+      div.className = "msg";
+      div.innerHTML = `<span class="${sender}">${sender === 'user' ? 'Вы' : 'Бот'}:</span> ${text}`;
+      chatBox.appendChild(div);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    async function sendMessage() {
+      const input = document.getElementById("message");
+      const text = input.value.trim();
+      if (!text) return;
+
+      appendMessage("user", text);
+      input.value = "";
+
+      const res = await fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: "test_user_123",
+          message: text
+        }),
+      });
+
+      const data = await res.json();
+      appendMessage("bot", data.answer || "Нет ответа");
+    }
+  </script>
+</body>
+</html>

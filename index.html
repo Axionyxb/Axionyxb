@@ -931,5 +931,23 @@ function toggleMenu() {
 }
 </script>
 
+
+<!-- ИИ-агент Axionyx -->
+<div id="ai-chat-button" style="position: fixed; bottom: 20px; right: 20px; background: #0077cc; color: white; padding: 12px 16px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.3); font-size: 20px; z-index: 9999;">
+  💬
+</div>
+
+<div id="ai-chat-box" style="position: fixed; bottom: 80px; right: 20px; width: 360px; height: 480px; background: white; border: 1px solid #ccc; border-radius: 12px; display: none; flex-direction: column; overflow: hidden; z-index: 9998; box-shadow: 0 4px 16px rgba(0,0,0,0.25);">
+  <iframe src="https://otttor.app.n8n.cloud/chat" style="width: 100%; height: 100%; border: none;"></iframe>
+</div>
+
+<script>
+  const chatBtn = document.getElementById('ai-chat-button');
+  const chatBox = document.getElementById('ai-chat-box');
+  chatBtn.addEventListener('click', () => {
+    chatBox.style.display = chatBox.style.display === 'none' ? 'flex' : 'none';
+  });
+</script>
+
 </body>
 </html>
