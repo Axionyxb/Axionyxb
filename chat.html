@@ -76,7 +76,9 @@
       chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
-    async function sendMessage() {
+    const chatId = "test_user_123";
+
+async function sendMessage() {
       const text = userInput.value.trim();
       if (!text) return;
       addMessage("user", text);
@@ -86,7 +88,7 @@
         const res = await fetch("https://proxy-n8n.koloski728.workers.dev", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message: text }),
+          body: JSON.stringify({ message: text, chat_id: chatId }),
         });
 
         const data = await res.json();
