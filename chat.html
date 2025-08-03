@@ -85,7 +85,7 @@ async function sendMessage() {
       userInput.value = "";
 
       try {
-        const res = await fetch("https://otttor.app.n8n.cloud/webhook/axionyx-chat", {
+        const res = await fetch("https://proxy-n8n.kolosik728.workers.dev/webhook/axionyx-chat", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ message: text, chat_id: chatId }),
