@@ -85,14 +85,14 @@ async function sendMessage() {
       userInput.value = "";
 
       try {
-        const res = await fetch("https://proxy-n8n.koloski728.workers.dev", {
+        const res = await fetch("https://otttor.app.n8n.cloud/webhook/axionyx-chat", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ message: text, chat_id: chatId }),
         });
 
         const data = await res.json();
-        addMessage("bot", data.answer || "Нет ответа");
+        addMessage("bot", data.response || "Нет ответа");
       } catch (err) {
         console.error(err);
         addMessage("bot", "Ошибка подключения к серверу");
