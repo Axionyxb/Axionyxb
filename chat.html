@@ -1,103 +1,78 @@
-
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Axionyx AI Chat</title>
-  <style>
-    body { font-family: Arial, sans-serif; }
-    #chat-container {
-      width: 350px;
-      height: 500px;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #f4f4f4;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      z-index: 9999;
-    }
-    #chat-header {
-      background: white;
-      padding: 10px;
-      font-weight: bold;
-      text-align: center;
-      border-bottom: 1px solid #ccc;
-    }
-    #chat-messages {
-      flex: 1;
-      padding: 10px;
-      overflow-y: auto;
-      background: #fff;
-    }
-    #chat-messages p {
-      margin: 5px 0;
-    }
-    #chat-input {
-      display: flex;
-      border-top: 1px solid #ccc;
-    }
-    #chat-input input {
-      flex: 1;
-      border: none;
-      padding: 10px;
-    }
-    #chat-input button {
-      border: none;
-      background: #007bff;
-      color: white;
-      padding: 10px 15px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <div id="chat-container">
-    <div id="chat-header">Axionyx AI Chat</div>
-    <div id="chat-messages"></div>
-    <div id="chat-input">
-      <input type="text" id="user-input" placeholder="Введите сообщение..."/>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>AXIONYX AI Chat</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: white;
+        margin: 0;
+        padding: 0;
+      }
+      #chat {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      #messages {
+        border: 1px solid #ccc;
+        padding: 10px;
+        height: 300px;
+        overflow-y: scroll;
+        background: #f9f9f9;
+      }
+      .message {
+        margin-bottom: 10px;
+      }
+      .user {
+        font-weight: bold;
+        color: #4a90e2;
+      }
+      .bot {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chat">
+      <h2>🤖 AXIONYX AI</h2>
+      <div id="messages"></div>
+      <input id="input" type="text" placeholder="Введите сообщение..." />
       <button onclick="sendMessage()">Отправить</button>
     </div>
-  </div>
 
-  <script>
-    const chatMessages = document.getElementById("chat-messages");
-    const userInput = document.getElementById("user-input");
+    <script>
+      const messagesDiv = document.getElementById("messages");
+      const input = document.getElementById("input");
 
-    function addMessage(role, text) {
-      const p = document.createElement("p");
-      p.innerHTML = "<strong style='color:" + (role === 'user' ? "blue" : "green") + "'>" + (role === 'user' ? "Вы" : "Бот") + ":</strong> " + text;
-      chatMessages.appendChild(p);
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-
-    const chatId = "test_user_123";
-
-async function sendMessage() {
-      const text = userInput.value.trim();
-      if (!text) return;
-      addMessage("user", text);
-      userInput.value = "";
-
-      try {
-        const res = await fetch("https://proxy-n8n.kolosik728.workers.dev/webhook/axionyx-chat", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message: text, chat_id: chatId }),
-        });
-
-        const data = await res.json();
-        addMessage("bot", data.response || "Нет ответа");
-      } catch (err) {
-        console.error(err);
-        addMessage("bot", "Ошибка подключения к серверу");
+      function appendMessage(text, sender) {
+        const div = document.createElement("div");
+        div.className = "message " + sender;
+        div.innerText = sender === "user" ? "Вы: " + text : "ИИ: " + text;
+        messagesDiv.appendChild(div);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
       }
-    }
-  </script>
-</body>
+
+      async function sendMessage() {
+        const text = input.value;
+        if (!text.trim()) return;
+        appendMessage(text, "user");
+        input.value = "";
+
+        try {
+          const res = await fetch("https://axionyx.ru/n8n/webhook/axionyx-chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: text })
+          });
+          const data = await res.json();
+          appendMessage(data.answer || "Нет ответа", "bot");
+        } catch (err) {
+          appendMessage("Ошибка подключения", "bot");
+          console.error(err);
+        }
+      }
+    </script>
+  </body>
 </html>
